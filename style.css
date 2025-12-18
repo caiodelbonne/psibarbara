@@ -136,10 +136,14 @@ h3 {
 
 .formation-grid {
     display: grid;
-    /* Adjusted minmax to 320px to allow 2 columns on tablets/smaller screens */
-    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    /* Enforce 2 columns to ensure span-2 item fills the row properly */
+    grid-template-columns: repeat(2, 1fr);
     gap: 2rem;
     margin-top: 2rem;
+}
+
+.formation-grid-full {
+    grid-template-columns: repeat(auto-fit, minmax(640px, 1fr));
 }
 
 /* congresso */
